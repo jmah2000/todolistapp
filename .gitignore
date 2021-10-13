@@ -1,0 +1,14 @@
+#ignores these files when uploading to git
+
+# node modules
+node_modules
+
+# VS Code Files
+.vscode
+
+# Parcel Files
+dist
+.parcel-cache
+
+# OS Files
+.DS_Store
