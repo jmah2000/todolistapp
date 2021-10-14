@@ -10,7 +10,7 @@
             "dateReleased": "October 11, 2021",
             "dateAdded": "October 12, 2021",
             "videoLength": "1:02",
-            "thumbNail": "~/thumbnails/i-could-be.jpg"
+            "thumbNail": "assets/thumbnails/i-could-be.jpg"
         },
         {
             "id": "jkAIUvd2eF8",
@@ -22,7 +22,7 @@
             "dateReleased": "October 13, 2019",
             "dateAdded": "January 1, 2021",
             "videoLength": "5:15",
-            "thumbNail": "~/thumbnails/spitfire.jpg"
+            "thumbNail": "assets/thumbnails/spitfire.jpg"
         },
         {
             "id": "rEcOzjg7vBU",
@@ -34,7 +34,7 @@
             "dateReleased": "April 22, 2016",
             "dateAdded": "April 1, 2021",
             "videoLength": "1:46",
-            "thumbNail": "~/thumbnails/why.jpg"
+            "thumbNail": "assets/thumbnails/why.jpg"
         },
         {
             "id": "8KBDqn3WCv4",
@@ -46,7 +46,7 @@
             "dateReleased": "May 17, 2021",
             "dateAdded": "June 5, 2021",
             "videoLength": "0:03",
-            "thumbNail": "~/thumbnails/im-pomu.jpg"
+            "thumbNail": "assets/thumbnails/im-pomu.jpg"
         },
         {
             "id": "Oft9GBEstKc",
@@ -58,7 +58,7 @@
             "dateReleased": "July 28, 2021",
             "dateAdded": "September 28, 2021",
             "videoLength": "2:56",
-            "thumbNail": "~/thumbnails/trickle-eye.jps"
+            "thumbNail": "assets/thumbnails/trickle-eye.jpg"
         }
     ]
 }

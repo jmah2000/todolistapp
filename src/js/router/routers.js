@@ -1,13 +1,13 @@
 import landingPage from '../pages/landingPage.js';
 import toWatchPage from '../pages/toWatch.js';
+import dataFetcher from '../utils/dataFetcher.js';
 
-const Router = (pathname) => {
-
+const Router = async (pathname) => {
+    const data = await dataFetcher('http://localhost:3000/videos')
     const routes = {
         "/src/": landingPage(),
-        "/toWatch": toWatchPage()
+        "/toWatch": toWatchPage(data)
     }  
-
     const app = document.querySelector('#app')
     app.innerHTML = ''
 
@@ -16,9 +16,7 @@ const Router = (pathname) => {
         pathname,
         window.location.origin + pathname
     )
-    console.log(window.location.pathname)
-    console.log(routes[window.location.pathname])
-    
+
     app.appendChild(routes[window.location.pathname])
 
 }
