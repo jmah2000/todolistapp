@@ -10,7 +10,7 @@ const landingPage = function ()
     buttonDiv.classList.add('ui-page-button')
     const h1 = elementCreator('h1', `YouTracker ${bookmarkIcon}`)
     const logo = elementCreator('blockquote', 'A Youtube video tracker (basically a bookmarker)', 'logo')
-    const linkElm = link('To Video Tracker App', '/toWatch', 'to-video')
+    const linkElm = link('To Video Tracker App', '/toWatch','to-video')
     buttonDiv.append(linkElm)
 
 

@@ -1,7 +1,7 @@
 import elementCreator from '../components/ui/elementCreator.js'
-import link from '../components/ui/link.js'
 import bookmarkIcon from '../components/icons/bookmark-icon.js'
 import makeImg from '../utils/makeImg.js'
+import anchor from '../components/ui/anchor.js'
 
 const toWatchPage = function (data)
 {
@@ -22,23 +22,38 @@ const toWatchPage = function (data)
     watchPage.append(watchPageHeader)
 
     // create a content container
-    const videoContainer = document.createElement('div')
+    const videoContainer = document.createElement('ul')
     videoContainer.classList.add('video-container')
     
     // loops for each piece of daya in the json file and appends it to the content div the appends the content div to the watchPage
     data.forEach(data => {
 
-        const content = document.createElement('div')
-        content.classList.add('div-content')
+        const content = document.createElement('li')
+        content.classList.add('video')
 
-        const name = document.createElement('span')
-        name.classList.add('name')
-
+        // creates a span to hold all the details of the video
         const text = document.createElement('span')
         text.classList.add('text')
 
-        var thumbNail = makeImg(`${data.thumbNail}`, `${data.title}`)
+        // this span is for the delete/edit icons
+        const clickables = document.createElement('span')
+        clickables.classList.add('clickables')
+
+        if (window.location.pathname == "/src/")
+        {
+            var thumbNail = makeImg(data.thumbNail, data.title)
+        }
+        else
+        {
+            var thumbNail = makeImg(`/src/${data.thumbNail}`, data.title)
+        }
+
+        var link2video = anchor("", data.link)
+
         var title = elementCreator('p', `${data.title}`, 'content')
+
+        link2video.append(title)
+
         var channel = elementCreator('p', `${data.channel}`, 'content')
         var category = elementCreator('p', `Category: ${data.category}`, 'content')
         var dateReleased = elementCreator('p', `Date Released: ${data.dateReleased}`, 'content')
@@ -46,7 +61,7 @@ const toWatchPage = function (data)
         var videoLength = elementCreator('p', `Video Length: ${data.videoLength}`, 'content')
 
         content.append(thumbNail)
-        text.append(title)
+        text.append(link2video)
         text.append(channel)
         text.append(category)
         text.append(dateReleased)
