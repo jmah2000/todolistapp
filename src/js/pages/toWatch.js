@@ -2,6 +2,7 @@ import elementCreator from '../components/ui/elementCreator.js'
 import link from '../components/ui/link.js'
 import bookmarkIcon from '../components/icons/bookmark-icon.js'
 import dataFetcher from '../utils/dataFetcher.js'
+import createTab from '../utils/createBookmark.js'
 
 const toWatchPage = function ()
 {
@@ -14,14 +15,11 @@ const toWatchPage = function ()
     
     // Content Creation
 
-    const content = document.createElement('div')
-    content.classList.add('content')
 
-    //Cant get this to work
-    const data = dataFetcher('../data/toDo.json')
+    const data = dataFetcher('http://localhost:3000/videos')
+    console.log(data)
     //const title = [data]
     //console.log(title)
-
 
     // append all the data/content
     watchPage.append(h1)

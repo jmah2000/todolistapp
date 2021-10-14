@@ -16,6 +16,9 @@ const Router = (pathname) => {
         pathname,
         window.location.origin + pathname
     )
+    console.log(window.location.pathname)
+    console.log(routes[window.location.pathname])
+    
     app.appendChild(routes[window.location.pathname])
 
 }
