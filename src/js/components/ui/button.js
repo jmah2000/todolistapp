@@ -1,4 +1,4 @@
-import makeElement from "../../utils/makeElement";
+import makeElement from "../../utils/makeElement.js";
 
 const button = function (label="ui button", className="ui-button"){
      const template = `<button class="${className}">${label}</button>`

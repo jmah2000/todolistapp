@@ -415,6 +415,30 @@ body {
   color: #a76c00;
 }
 
+svg {
+  color: #a76c00;
+}
+
+footer {
+  background-color: #a76c00;
+  height: 70px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+footer .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-color: #3f3f3f;
+  border-radius: 25px;
+}
+
 .ui-page-header {
   text-align: center;
   padding: 2rem;
@@ -432,7 +456,7 @@ blockquote {
   margin-bottom: 2rem;
 }
 
-svg {
+.logo > svg {
   padding-top: 10px;
   padding-left: 10px;
   width: 42px;
@@ -457,9 +481,13 @@ svg {
   justify-content: center;
 }
 
+.video-container:last-of-type {
+  margin-bottom: 85px;
+}
+
 .video {
-  margin: 1rem 2rem;
-  padding: 1rem 2rem;
+  margin: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -472,11 +500,40 @@ svg {
   width: 77.5%;
 }
 
+.content {
+  width: 350px;
+  padding: 0 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.video-status-true {
+  color: red;
+}
+
+.video-status-false {
+  color: #3f3f3f;
+}
+
 .content::target-text {
   width: 70%;
 }
 
 img {
-  width: 120px;
-  height: 90px;
+  width: 200px;
+  height: 112.5px;
+}
+
+.ud-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ud-icon .icon {
+  width: 45px;
+  height: 45px;
+  margin: 8px;
+  background-color: #3f3f3f;
 }

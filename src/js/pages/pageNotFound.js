@@ -2,7 +2,7 @@ import elementCreator from '../components/ui/elementCreator.js'
 import link from '../components/ui/link.js'
 import bookmarkIcon from '../components/icons/bookmark-icon.js'
 
-const landingPage = function ()
+const pageNotFound = function ()
 {
     const header = document.createElement('header')
     header.classList.add('ui-page-header')
@@ -10,7 +10,10 @@ const landingPage = function ()
     buttonDiv.classList.add('ui-page-button')
     const h1 = elementCreator('h1', `YouTracker ${bookmarkIcon}`, 'logo')
     const logo = elementCreator('blockquote', 'A Youtube video tracker (basically a bookmarker)', 'logo')
-    const linkElm = link('To Video Tracker App', '/toWatch','to-video')
+
+    const errorMsg = elementCreator('p', '404 error: Page not found', 'error')
+
+    const linkElm = link('Take me back!', '/src/','to-home')
     buttonDiv.append(linkElm)
 
 
@@ -21,4 +24,4 @@ const landingPage = function ()
     return header
 }
 
-export default landingPage
+export default pageNotFound
