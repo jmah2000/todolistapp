@@ -8,19 +8,16 @@ const Router = async (pathname) => {
     const routes = {
         "/src/": landingPage(),
         "/toWatch": toWatchPage(data),
-        "/404error": pageNotFound()
+        "/pageNotFound": pageNotFound()
     }  
     const app = document.querySelector('#app')
     app.innerHTML = ''
 
-    if (window.location.pathname == "/src/")
-    {
-        window.history.pushState(
-            {},
-            pathname,
-            window.location.origin + pathname
-        )
-    }
+    window.history.pushState(
+        {},
+        pathname,
+        window.location.origin + pathname
+    )
 
     app.appendChild(routes[window.location.pathname])
 

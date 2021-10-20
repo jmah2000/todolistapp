@@ -13,7 +13,6 @@ const landingPage = function ()
     const linkElm = link('To Video Tracker App', '/toWatch','to-video')
     buttonDiv.append(linkElm)
 
-
     header.append(h1)
     header.append(logo)
     header.append(buttonDiv)

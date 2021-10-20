@@ -19,6 +19,7 @@ const pageNotFound = function ()
 
     header.append(h1)
     header.append(logo)
+    header.append(errorMsg)
     header.append(buttonDiv)
 
     return header
