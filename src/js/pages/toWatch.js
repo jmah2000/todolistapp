@@ -9,6 +9,7 @@ import videoAddIcon from '../components/icons/video-add.js'
 
 const toWatchPage = function (data)
 {
+
     // Creating a div for everything
     const watchPage = document.createElement('div')
     watchPage.classList.add('container')
