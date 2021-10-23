@@ -1,17 +1,16 @@
 import landingPage from '../pages/landingPage.js';
 import pageNotFound from '../pages/pageNotFound.js';
 import toWatchPage from '../pages/toWatch.js';
-import dataFetcher from '../utils/dataFetcher.js';
 
-const Router = async (pathname) => {
-    const data = await dataFetcher('http://localhost:3000/videos')
+const routes = {
+    "/src/": landingPage,
+    "/toWatch": toWatchPage,
+}  
 
-    const routes = {
-        "/src/": landingPage(),
-        "/toWatch": toWatchPage(data)
-    }  
-
+const Router = function (pathname) {
+    
     const isValidRoute = Object.keys(routes).find(key => key === pathname)
+    console.log(isValidRoute)
 
     const app = document.querySelector('#app')
     app.innerHTML = ''
@@ -21,14 +20,13 @@ const Router = async (pathname) => {
         pathname,
         window.location.origin + pathname
     )
-
     if(isValidRoute === undefined)
         {
             app.appendChild(pageNotFound())
         }
         else
         {
-            app.appendChild(routes[isValidRoute])
+            app.appendChild(routes[isValidRoute]())
         }
 
 }

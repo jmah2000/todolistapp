@@ -6,9 +6,12 @@ import makeImg from '../utils/makeImg.js'
 import anchor from '../components/ui/anchor.js'
 import button from '../components/ui/button.js'
 import videoAddIcon from '../components/icons/video-add.js'
+import { getStore } from '../utils/store.js'
 
-const toWatchPage = function (data)
+const toWatchPage = function ()
 {
+
+    let data = getStore()
 
     // Creating a div for everything
     const watchPage = document.createElement('div')
