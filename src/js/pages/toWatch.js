@@ -8,7 +8,7 @@ import button from '../components/ui/button.js'
 import videoAddIcon from '../components/icons/video-add.js'
 import { getStore } from '../utils/store.js'
 
-const toWatchPage = function ()
+const towatchpage = function ()
 {
 
     let data = getStore()
@@ -121,4 +121,4 @@ const toWatchPage = function ()
     return watchPage
 }
 
-export default toWatchPage
+export default towatchpage

@@ -1,7 +1,7 @@
 {
   "name": "workflow",
   "version": "1.0.0",
-  "description": "Fewder is a simple Front End Framework for developing Web App's using modules",
+  "description": "this is a todo application but instead of tasks it's videos",
   "directories": {
     "doc": "docs"
   },
