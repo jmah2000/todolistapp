@@ -3,6 +3,7 @@ import pageNotFound from '../pages/pageNotFound.js';
 import toWatchPage from '../pages/toWatch.js';
 
 const routes = {
+    "/": landingPage,
     "/src/": landingPage,
     "/towatch": toWatchPage,
 }  
