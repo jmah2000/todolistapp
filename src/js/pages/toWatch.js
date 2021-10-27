@@ -57,14 +57,8 @@ const toWatchPage = function ()
 
         console.log(window.location.pathname)
 
-        if (window.location.pathname == "/src/")
-        {
-            var thumbNail = makeImg(data.thumbNail, data.title)
-        }
-        else
-        {
-            var thumbNail = makeImg(`/src/${data.thumbNail}`, data.title)
-        }
+        // Create thumbnail with pathing
+        var thumbNail = makeImg(data.thumbNail, data.title)
 
         var link2video = anchor("", data.link)
 
