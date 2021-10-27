@@ -2,8 +2,11 @@ const {src, dest} = require('gulp')
 
 const static = function(cb){
     // task
-   return src('src/data/*')
-    .pipe(dest('dist/data'))
+   return src([
+    'src/data/*.*',
+    'src/data/thumbnails/*.*'
+   ], { base: './src/'})
+    .pipe(dest('dist'))
 
     // temporial dead zone
     cb()

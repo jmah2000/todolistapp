@@ -55,6 +55,8 @@ const toWatchPage = function ()
         const clickables = document.createElement('span')
         clickables.classList.add('clickables')
 
+        console.log(window.location.pathname)
+
         if (window.location.pathname == "/src/")
         {
             var thumbNail = makeImg(data.thumbNail, data.title)
