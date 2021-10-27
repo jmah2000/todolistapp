@@ -1,10 +1,10 @@
-import landingpage from '../pages/landingPage.js';
-import pagenotfound from '../pages/pageNotFound.js';
-import towatchpage from '../pages/toWatch.js';
+import landingPage from '../pages/landingPage.js';
+import pageNotFound from '../pages/pageNotFound.js';
+import toWatchPage from '../pages/toWatch.js';
 
 const routes = {
-    "/src/": landingpage,
-    "/toWatch": towatchpage,
+    "/src/": landingPage,
+    "/towatch": toWatchPage,
 }  
 
 const Router = function (pathname) {
@@ -22,7 +22,7 @@ const Router = function (pathname) {
     )
     if(isValidRoute === undefined)
         {
-            app.appendChild(pagenotfound())
+            app.appendChild(pageNotFound())
         }
         else
         {

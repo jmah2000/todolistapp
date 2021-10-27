@@ -2,7 +2,7 @@ import elementCreator from '../components/ui/elementCreator.js'
 import link from '../components/ui/link.js'
 import bookmarkIcon from '../components/icons/bookmark-icon.js'
 
-const pagenotfound = function ()
+const pageNotFound = function ()
 {
     const header = document.createElement('header')
     header.classList.add('ui-page-header')
@@ -25,4 +25,4 @@ const pagenotfound = function ()
     return header
 }
 
-export default pagenotfound
+export default pageNotFound

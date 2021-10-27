@@ -7,10 +7,10 @@ const app = document.querySelector("#app")
 const appInit = async function(e)
 {
 
-    let videoData = await dataFetcher('http://localhost:3000/videos')
+    let videoData = await dataFetcher('./data/toDo.json')
 
-    createStore(videoData)
-
+    createStore(videoData['videos'])
+    
     Router(window.location.pathname)
 
 }
