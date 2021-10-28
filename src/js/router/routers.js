@@ -1,17 +1,16 @@
-import landingPage from '../pages/landingPage.js';
+import index from '../pages/index.js';
 import pageNotFound from '../pages/pageNotFound.js';
-import toWatchPage from '../pages/toWatch.js';
+import toWatchPage from '../pages/towatch/toWatch.js';
 
 const routes = {
-    "/": landingPage,
-    "/src/": landingPage,
+    "/": index,
+    "/src/": index,
     "/towatch": toWatchPage,
 }  
 
 const Router = function (pathname) {
     
     const isValidRoute = Object.keys(routes).find(key => key === pathname)
-    console.log(isValidRoute)
 
     const app = document.querySelector('#app')
     app.innerHTML = ''
@@ -21,6 +20,7 @@ const Router = function (pathname) {
         pathname,
         window.location.origin + pathname
     )
+
     if(isValidRoute === undefined)
         {
             app.appendChild(pageNotFound())

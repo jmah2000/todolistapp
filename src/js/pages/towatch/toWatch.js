@@ -1,12 +1,12 @@
-import elementCreator from '../components/ui/elementCreator.js'
-import bookmarkIcon from '../components/icons/bookmark-icon.js'
-import trashIcon from '../components/icons/trash-icon.js'
-import editIcon from '../components/icons/edit-icon.js'
-import makeImg from '../utils/makeImg.js'
-import anchor from '../components/ui/anchor.js'
-import button from '../components/ui/button.js'
-import videoAddIcon from '../components/icons/video-add.js'
-import { getStore } from '../utils/store.js'
+import elementCreator from '../../components/ui/elementCreator.js'
+import bookmarkIcon from '../../components/icons/bookmark-icon.js'
+import trashIcon from '../../components/icons/trash-icon.js'
+import editIcon from '../../components/icons/edit-icon.js'
+import makeImg from '../../utils/makeImg.js'
+import anchor from '../../components/ui/anchor.js'
+import button from '../../components/ui/button.js'
+import videoAddIcon from '../../components/icons/video-add.js'
+import { getStore } from '../../utils/store.js'
 
 const toWatchPage = function ()
 {
@@ -54,8 +54,6 @@ const toWatchPage = function ()
         // this span is for the delete/edit icons
         const clickables = document.createElement('span')
         clickables.classList.add('clickables')
-
-        console.log(window.location.pathname)
 
         // Create thumbnail with pathing
         var thumbNail = makeImg(data.thumbNail, data.title)

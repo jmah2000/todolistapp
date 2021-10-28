@@ -2,7 +2,7 @@ import elementCreator from '../components/ui/elementCreator.js'
 import link from '../components/ui/link.js'
 import bookmarkIcon from '../components/icons/bookmark-icon.js'
 
-const landingPage = function ()
+const index = function ()
 {
     const header = document.createElement('header')
     header.classList.add('ui-page-header')
@@ -20,4 +20,4 @@ const landingPage = function ()
     return header
 }
 
-export default landingPage
+export default index
