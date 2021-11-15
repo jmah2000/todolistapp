@@ -4,14 +4,24 @@ import trashIcon from '../../components/icons/trash-icon.js'
 import editIcon from '../../components/icons/edit-icon.js'
 import makeImg from '../../utils/makeImg.js'
 import anchor from '../../components/ui/anchor.js'
-import button from '../../components/ui/button.js'
+import {button} from '../../components/ui/button.js'
 import videoAddIcon from '../../components/icons/video-add.js'
-import { getStore } from '../../utils/store.js'
+import { getStore } from '../../redux/store.js'
+import Router from '../../router/routers.js'
 
 const toWatchPage = function ()
 {
+    const datas = getStore()
 
-    let data = getStore()
+    // CRUD FUNCTIONS
+    function onEditVideo(e) {
+        // TODO: edit
+    }
+
+    function onDeleteVideo(e) {
+        const videoId = {id:e.currentTarget.dataset.key}
+        Router('/delete', videoId)
+    }
 
     // Creating a div for everything
     const watchPage = document.createElement('div')
@@ -38,7 +48,7 @@ const toWatchPage = function ()
     videoContainer.classList.add('video-container')
     
     // loops for each piece of daya in the json file and appends it to the content div the appends the content div to the watchPage
-    data.forEach(data => {
+    datas.forEach(data => {
 
         const content = document.createElement('li')
         content.classList.add('video')
@@ -50,10 +60,7 @@ const toWatchPage = function ()
         // UD part of crud for icons. (Update and Delete)
         const ud = document.createElement('span')
         ud.classList.add('ud-icon')
-
-        // this span is for the delete/edit icons
-        const clickables = document.createElement('span')
-        clickables.classList.add('clickables')
+        ud.id = "udbuttons"
 
         // Create thumbnail with pathing
         var thumbNail = makeImg(data.thumbNail, data.title)
@@ -92,22 +99,26 @@ const toWatchPage = function ()
         content.append(text)
 
         // Creation and addition of the icons
-        const editButton = button(editIcon, 'icon')
-        const trashButton = button(trashIcon, 'icon')
-
+        const editButton = button(editIcon, 'icon', 'edit', data.id)
+        const trashButton = button(trashIcon, 'icon', 'delete', data.id)
+        
         ud.append(editButton)
         ud.append(trashButton)
+
+        
+        ud.querySelector('#delete').addEventListener('click', onDeleteVideo)
+
         content.append(ud)
 
         // final append for each video before the final-final append to the DOM
         videoContainer.append(content)
+
     });
 
     // Create and append a footer
     const videoAddButton = button(videoAddIcon, 'icon')
 
     footer.append(videoAddButton)
-
 
     watchPage.append(videoContainer)
     watchPage.append(footer)

@@ -1,5 +1,5 @@
 import Router from "./router/routers.js";
-import { createStore } from "./utils/store.js";
+import { createStore } from "./redux/store.js";
 import dataFetcher from './utils/dataFetcher.js';
 
 const app = document.querySelector("#app")

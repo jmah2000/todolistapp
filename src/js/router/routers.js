@@ -1,14 +1,16 @@
 import index from '../pages/index.js';
 import pageNotFound from '../pages/pageNotFound.js';
 import toWatchPage from '../pages/towatch/toWatch.js';
+import deletePage from '../pages/delete.js';
 
 const routes = {
     "/": index,
     "/src/": index,
     "/towatch": toWatchPage,
+    "/delete": deletePage
 }  
 
-const Router = function (pathname) {
+const Router = function (pathname, params=null) {
     
     const isValidRoute = Object.keys(routes).find(key => key === pathname)
 
@@ -27,7 +29,7 @@ const Router = function (pathname) {
         }
         else
         {
-            app.appendChild(routes[isValidRoute]())
+            app.appendChild(routes[isValidRoute](params))
         }
 
 }

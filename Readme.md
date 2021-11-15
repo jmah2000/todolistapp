@@ -1,25 +1,5 @@
-# Basic Framework For Front End Vanilla.js Projects
+## Readme for my todo application
 
-## Preflight Check
-1. Run npm install from the framework root folder. This will create the node_modules and install the dependancies found in the package.json file.
-```bash
-  npm install
 ```
-
-1. Run development build using the parcel bundler.
-```bash
-   npx parcel src/index.html
-```
-or
-```
-  npm start
-```
-
-1. Run production build using the parcel bundler.
-```bash
-   npx parcel build src/index.html
-```
-or
-```
-  npm run build
+  I wanted to do something a little different than a todo list. So I thought about changing it to a watching videos list on youtube.
 ```
