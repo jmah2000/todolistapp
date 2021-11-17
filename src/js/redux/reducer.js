@@ -12,10 +12,20 @@ function reducer  (action){
             updateStore(newStore)
             action.cb()
         return  "remove video";
+
         case "edit": 
         return "edit video";
-        case "add": 
+
+        case "add":
+            const addStore = getStore()
+            const addVideo = addStore.push(action.payload.tempObj)
+            console.log(addStore)
+            console.log(addVideo)
+            console.log(action.payload.tempObj)
+
+            action.cb()
         return "add new video";
+
         default: return store
     }
 

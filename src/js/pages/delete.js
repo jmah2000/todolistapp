@@ -7,8 +7,8 @@ import makeImg from "../utils/makeImg.js";
 import anchor from "../components/ui/anchor.js";
 import reducer from "../redux/reducer.js";
 
-const cancelButton = simpleButton("cancel", "deletepage-cancel-button")
-const deleteButton = simpleButton("fully delete", "deletepage-delete-button")
+const cancelButton = simpleButton("cancel", "crud-button")
+const deleteButton = simpleButton("fully delete", "crud-button")
 
 
 const deletePage = function (passedVideoId)
@@ -22,6 +22,7 @@ const deletePage = function (passedVideoId)
 
     const h1 = elementCreator('h1', `YouTracker ${bookmarkIcon}`, 'logo')
     const logo = elementCreator('blockquote', 'A Youtube video tracker (basically a bookmarker)', 'logo')
+    const pageTitle = elementCreator('blockquote', 'Deleting a video', 'logo')
 
 
     // UD PAGE HANDLERS
@@ -104,11 +105,12 @@ const deletePage = function (passedVideoId)
     cancelButton.addEventListener('click', onDeleteCancel)
     deleteButton.addEventListener('click', onDeleteVideo)
 
-    buttonDiv.append(cancelButton)
     buttonDiv.append(deleteButton)
+    buttonDiv.append(cancelButton)
 
     domDelete.append(h1)
     domDelete.append(logo)
+    domDelete.append(pageTitle)
     domDelete.append(videoContainer)
     domDelete.append(buttonDiv)
 

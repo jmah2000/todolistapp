@@ -481,7 +481,7 @@ blockquote {
   justify-content: center;
 }
 
-.video-container:last-of-type {
+.video-container:last-of-type, .form {
   margin-bottom: 85px;
 }
 
@@ -542,4 +542,34 @@ img {
   margin-bottom: 36px;
   font-size: 36px;
   font-weight: bold;
+}
+
+.form {
+  width: 432px;
+  background-color: #3f3f3f;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.form label {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.form label input {
+  margin-left: 12px;
+  width: 200px;
+}
+
+.form label .checkbox {
+  width: 12px;
+  margin-right: 188px;
+}
+
+.crud-button {
+  background-color: #3f3f3f;
+  margin: 0 8px;
+  border-radius: 4px;
+  color: white;
 }

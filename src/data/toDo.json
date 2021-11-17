@@ -7,10 +7,10 @@
             "category": "Shorts",
             "title": "I could be...",
             "isComplete": false,
-            "dateReleased": "October 11, 2021",
-            "dateAdded": "October 12, 2021",
+            "dateReleased": "2021-10-11",
+            "dateAdded": "2021-10-12",
             "videoLength": "1:02",
-            "thumbNail": "./data/thumbnails/i-could-be.jpg"
+            "thumbNail": "http://img.youtube.com/vi/p7rJNPBExAc/2.jpg"
         },
         {
             "id": "jkAIUvd2eF8",
@@ -19,10 +19,10 @@
             "category": "SPITFIRE",
             "title": "GO2 - Spitfire",
             "isComplete": true,
-            "dateReleased": "October 13, 2019",
-            "dateAdded": "January 1, 2021",
+            "dateReleased": "2019-10-13",
+            "dateAdded": "2021-01-01",
             "videoLength": "5:15",
-            "thumbNail": "./data/thumbnails/spitfire.jpg"
+            "thumbNail": "http://img.youtube.com/vi/jkAIUvd2eF8/2.jpg"
         },
         {
             "id": "rEcOzjg7vBU",
@@ -31,10 +31,10 @@
             "category": "Why...?",
             "title": "Athletic Theme (PAL Version) - Super Mario World",
             "isComplete": true,
-            "dateReleased": "April 22, 2016",
-            "dateAdded": "April 1, 2021",
+            "dateReleased": "2016-04-16",
+            "dateAdded": "2021-04-01",
             "videoLength": "1:46",
-            "thumbNail": "./data/thumbnails/why.jpg"
+            "thumbNail": "http://img.youtube.com/vi/rEcOzjg7vBU/2.jpg"
         },
         {
             "id": "8KBDqn3WCv4",
@@ -43,10 +43,10 @@
             "category": "Meme",
             "title": "WHO IS SHE?",
             "isComplete": false,
-            "dateReleased": "May 17, 2021",
-            "dateAdded": "June 5, 2021",
+            "dateReleased": "2021-05-17",
+            "dateAdded": "2021-06-05",
             "videoLength": "0:03",
-            "thumbNail": "./data/thumbnails/im-pomu.jpg"
+            "thumbNail": "http://img.youtube.com/vi/8KBDqn3WCv4/2.jpg"
         },
         {
             "id": "Oft9GBEstKc",
@@ -55,10 +55,10 @@
             "category": "Cover",
             "title": "EYE (English Cover)【Trickle】「Kanaria」",
             "isComplete": true,
-            "dateReleased": "July 28, 2021",
-            "dateAdded": "September 28, 2021",
+            "dateReleased": "2021-07-28",
+            "dateAdded": "2021-09-28",
             "videoLength": "2:56",
-            "thumbNail": "./data/thumbnails/trickle-eye.jpg"
+            "thumbNail": "http://img.youtube.com/vi/Oft9GBEstKc/2.jpg"
         }
     ]
 }

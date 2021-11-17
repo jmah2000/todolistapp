@@ -1,0 +1,29 @@
+.form {
+    width: 432px;
+    background-color: #3f3f3f;
+    border-radius: 12px;
+    padding: 24px;
+
+    label {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        input {
+            margin-left: 12px;
+            width: 200px;
+
+        }
+        .checkbox {
+            width: 12px;
+            margin-right: 188px;
+        }
+    }
+}
+
+.crud-button {
+    background-color: #3f3f3f;
+    margin: 0 8px;
+    border-radius: 4px;
+    color: white;
+}

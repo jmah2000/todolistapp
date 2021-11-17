@@ -14,6 +14,10 @@ const toWatchPage = function ()
     const datas = getStore()
 
     // CRUD FUNCTIONS
+    function onAddVideo(e){
+        Router('/add')
+    }
+
     function onEditVideo(e) {
         // TODO: edit
     }
@@ -71,11 +75,11 @@ const toWatchPage = function ()
 
         link2video.append(title)
 
-        var channel = elementCreator('p', `${data.channel}`, 'content')
+        var channel = elementCreator('p', `Ch: ${data.channel}`, 'content')
         var category = elementCreator('p', `Category: ${data.category}`, 'content')
-        var dateReleased = elementCreator('p', `Date Released: ${data.dateReleased}`, 'content')
-        var dateAdded = elementCreator('p', `Date Added: ${data.dateAdded}`, 'content')
-        var videoLength = elementCreator('p', `Video Length: ${data.videoLength}`, 'content')
+        var dateReleased = elementCreator('p', `Released: ${data.dateReleased}`, 'content')
+        var dateAdded = elementCreator('p', `Added: ${data.dateAdded}`, 'content')
+        var videoLength = elementCreator('p', `Length: ${data.videoLength}`, 'content')
 
 
         // Appends the details of each video into the text variable then appends the text variable to the content variable
@@ -116,9 +120,11 @@ const toWatchPage = function ()
     });
 
     // Create and append a footer
-    const videoAddButton = button(videoAddIcon, 'icon')
+    const videoAddButton = button(videoAddIcon, 'icon', 'add')
 
     footer.append(videoAddButton)
+
+    footer.querySelector('#add').addEventListener('click', onAddVideo)
 
     watchPage.append(videoContainer)
     watchPage.append(footer)

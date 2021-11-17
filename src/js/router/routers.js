@@ -2,12 +2,14 @@ import index from '../pages/index.js';
 import pageNotFound from '../pages/pageNotFound.js';
 import toWatchPage from '../pages/towatch/toWatch.js';
 import deletePage from '../pages/delete.js';
+import addPage from '../pages/add.js';
 
 const routes = {
     "/": index,
     "/src/": index,
     "/towatch": toWatchPage,
-    "/delete": deletePage
+    "/delete": deletePage,
+    "/add": addPage
 }  
 
 const Router = function (pathname, params=null) {
