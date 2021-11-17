@@ -4,16 +4,14 @@ import { getStore } from "../redux/store.js";
 import bookmarkIcon from '../components/icons/bookmark-icon.js'
 import elementCreator from '../components/ui/elementCreator.js'
 import reducer from "../redux/reducer.js";
-import createForm from "../utils/formCreate.js";
+import {createForm} from "../utils/formCreate.js";
 
 const cancelButton = simpleButton("cancel", "crud-button")
 const addButton = simpleButton("add", "crud-button")
 
 
-const addPage = function (passedVideoId)
+const addPage = function ()
 {
-    const datas = getStore();
-
     const domAdd = document.createElement('header')
     domAdd.classList.add('ui-page-header')
     const buttonDiv = document.createElement('span')

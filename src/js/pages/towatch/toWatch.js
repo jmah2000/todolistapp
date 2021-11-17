@@ -19,7 +19,8 @@ const toWatchPage = function ()
     }
 
     function onEditVideo(e) {
-        // TODO: edit
+        const videoId = {id:e.currentTarget.dataset.key}
+        Router('/edit', videoId)
     }
 
     function onDeleteVideo(e) {
@@ -109,7 +110,7 @@ const toWatchPage = function ()
         ud.append(editButton)
         ud.append(trashButton)
 
-        
+        ud.querySelector('#edit').addEventListener('click', onEditVideo)
         ud.querySelector('#delete').addEventListener('click', onDeleteVideo)
 
         content.append(ud)

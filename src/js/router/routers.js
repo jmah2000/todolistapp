@@ -3,13 +3,15 @@ import pageNotFound from '../pages/pageNotFound.js';
 import toWatchPage from '../pages/towatch/toWatch.js';
 import deletePage from '../pages/delete.js';
 import addPage from '../pages/add.js';
+import editPage from '../pages/edit.js';
 
 const routes = {
     "/": index,
     "/src/": index,
     "/towatch": toWatchPage,
     "/delete": deletePage,
-    "/add": addPage
+    "/add": addPage,
+    "/edit": editPage
 }  
 
 const Router = function (pathname, params=null) {
