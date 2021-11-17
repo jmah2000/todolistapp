@@ -491,13 +491,14 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: #3f3f3f;
   border-radius: 12px;
   width: 720px;
 }
 
 .text {
-  width: 77.5%;
+  width: 180px;
 }
 
 .content {
@@ -522,10 +523,11 @@ blockquote {
 
 img {
   width: 100px;
-  height: 56.25px;
+  height: 75px;
 }
 
 .ud-icon {
+  width: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +536,7 @@ img {
 .ud-icon .icon {
   width: 45px;
   height: 45px;
-  margin: 8px;
+  margin: 0 12px;
   background-color: #3f3f3f;
 }
 
